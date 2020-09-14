@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { useDispatch } from "react-redux";
+import { registerUser } from "../../../_actions/user_action";
 
 function RegisterPage() {
 
@@ -40,14 +41,14 @@ function RegisterPage() {
             name:Name
         }
 
-        // dispatch(registerUser(body))
-        //     .then(response => {
-        //         if(response.payload.loginSuccess) {
+        dispatch(registerUser(body));
+            // .then(response => {
+            //     if(response.payload.loginSuccess) {
                     
-        //         } else {
-        //             alert
-        //         }
-        //     })
+            //     } else {
+            //         alert
+            //     }
+            // })
         
     return (
         <div style={{
