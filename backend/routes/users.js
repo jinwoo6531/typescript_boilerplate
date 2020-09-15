@@ -16,9 +16,9 @@ router.post("/register", (req, res) => {
   });
 });
 router.post("/login", (req, res) => {
+  console.log("들어온다");
   //요청된 이메일을 데이터베이스에 있는지 찾는다.
   User.findOne({ email: req.body.email }, (user) => {
-    
     if (!user) {
       return res.json({
         loginSuccess: false,
