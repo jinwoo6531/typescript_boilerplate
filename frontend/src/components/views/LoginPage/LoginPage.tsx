@@ -9,20 +9,15 @@ function LoginPage() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
-  interface IEmail {
-    Email: String;
-    Password: String;
-  }
-
-  const onEmailHandler = (event: any) => {
+  const onEmailHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.currentTarget.value);
   };
 
-  const onPasswordHandler = (event: any) => {
+  const onPasswordHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.currentTarget.value);
   };
 
-  const onSubmitHandler = (event: any) => {
+  const onSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
 
     let body = {
